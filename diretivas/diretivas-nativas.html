@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diretivas Nativas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="diretivas-nativas.app.js"></script>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body ng-controller="DiretivasNativasController">
+    <h1>Diretivas Nativas</h1>
+
+    <div ng-class=" valoresDiv.ehVermelho ? 'vermelho' : '' ">
+        {{ valoresDiv.descricaoInterna }}
+    </div>
+
+    <!-- <input type="button" value="Aplicar Vermelho" ng-click="aplicarVermelho()">
+    <input type="button" value="Retirar Vermelho" ng-click="retirarVermelho()"> -->
+    <input type="button" value="toggle" ng-click="valoresDiv.ehVermelho ? retirarVermelho() : aplicarVermelho()">
+
+</body>
+
+</html>

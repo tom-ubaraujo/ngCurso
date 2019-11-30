@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formularios</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="formulario.controller.js"></script>
+</head>
+
+<body ng-controller="FormController">
+    <form name="meuFormulario">
+        <input type="text" ng-model="nomeFormulario" name="nomeFormulario" placeholder="Seu nome é..." required />
+        <button ng-disabled="meuFormulario.$invalid" ng-click="salvar()" type="button">Salvar</button>
+
+        <br />
+
+        <span ng-show="meuFormulario.$invalid">
+            Formulário com erros!
+        </span>
+
+        <br>
+    </form>
+
+</body>
+
+</html>

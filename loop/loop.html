@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Loop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="loop.controller.js"></script>
+</head>
+
+<body ng-controller="LoopController">
+
+    <ul>
+        <li ng-repeat="fruta in frutas">{{fruta}}</li>
+    </ul>
+
+    <input type="text" ng-model="nomeFruta">
+
+    <button ng-click="salvarFruta()">
+        Salvar!
+    </button>
+
+</body>
+
+</html>

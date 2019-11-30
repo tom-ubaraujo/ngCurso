@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Controladores</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="controlador.controller.js"></script>
+</head>
+
+<body ng-controller="ControladorController">
+
+    Nome: <input type="text" ng-model="nome" />
+
+    <hr />
+
+    <h1>Olá{{nome}}!</h1>
+
+    <div>
+        <button ng-click="contarCliques()">
+            Clique Aqui!
+        </button>
+        <button ng-click="limpaCliques()">
+            Zerar
+        </button>
+    </div>
+
+    <hr />
+
+    <p>
+        Você clicou no botão "Clique aqui" {{qtdCliques}} vezes!
+    </p>
+
+</body>
+
+</html>

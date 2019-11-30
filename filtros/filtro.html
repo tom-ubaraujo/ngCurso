@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formularios</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="filtros.app.js"></script>
+    <script src="filtro-controller.js"></script>
+</head>
+
+<body ng-controller="FiltroController">
+    <hr>CPF: <input type="text" ng-model="cpfDigitado" />
+    <h1>CPF Digitado: {{cpfDigitado | cpf}}</h1>
+    <hr />
+
+    <hr>CNPJ: <input type="text" ng-model="cnpjDigitado" />
+    <h1>CNPJ Digitado: {{cnpjDigitado | cnpj}}</h1>
+    <hr />
+
+</body>
+
+</html>
